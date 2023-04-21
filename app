@@ -7,12 +7,12 @@ x = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h'}
 y = [8, 7, 6, 5, 4, 3, 2, 1]
 x_vals_plus = []
 x_vals_minus = []
-df = pd.DataFrame(np.zeros((8, 8)).astype(int), index=x, columns=x.values())
 safe = 0
 x_keys = []
 row = []
 safe_check_plus = []
 safe_check_minus = []
+df = pd.DataFrame(np.zeros((8, 8)).astype(int), index=x, columns=x.values())
 # Split row and column identifiers to mark occupied positions in data frame
 for i in pawns:
     df.at[int(i[1]), i[0]] = 1
