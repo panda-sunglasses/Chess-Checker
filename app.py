@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+# Output should be '7'
 pawns = {'b2', 'f6', 'h8', 'a1', 'd4', 'g7', 'e5', 'c3'}
 x = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h'}
 y = [8, 7, 6, 5, 4, 3, 2, 1]
