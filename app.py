@@ -23,10 +23,11 @@ for i in pawns:
 # print(df)
 # print(x_keys)
 # print(pawns)
-# Create lists of diagonal coordinates one row behind pawns in the data set
 
+# Create lists of diagonal coordinates one row behind pawns in the data set
 x_vals_plus += [x[i + 1] for i in x_keys if i < 8]
 x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
+
 # Concatenate x and y coordinates to be checked in two lists, one for xy + 1 and xy - 1
 for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
     if x_keys[i] > 1 < 8:
@@ -38,6 +39,7 @@ for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
 # print(y_vals_minus)
 # print(safe_check_plus)
 # print(safe_check_minus)
+
 # Check if the coordinates in safe_check_plus/minus lists == 1. If so, add 1 to int(safe)
 for i, j in zip(safe_check_plus[::], safe_check_minus[::]):
     # My latest attempt to make sure I don't end up with rows 0 or 9.
