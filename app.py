@@ -30,9 +30,8 @@ x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
 
 # Concatenate x and y coordinates to be checked in two lists, one for xy + 1 and xy - 1
 for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
-    if x_keys[i] > 1 < 8:
-        safe_check_plus.append(''.join(x_vals_plus[i] + '' + str(int(row[i]) + 1)))
-        safe_check_minus.append(''.join(x_vals_minus[i] + '' + str(int(row[i]) - 1)))
+    safe_check_plus.append(''.join(x_vals_plus[i] + '' + str(int(row[i]) + 1)))
+    safe_check_minus.append(''.join(x_vals_minus[i] + '' + str(int(row[i]) - 1)))
 # print(df)
 # print(pawns)
 # print(y_vals_plus)
