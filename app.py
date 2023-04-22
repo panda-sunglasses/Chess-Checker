@@ -21,7 +21,7 @@ for i in pawns:
         x_keys += [key for key, value in x.items() if value == i[0]]
         row.append(int(i[1]))
 
-# Create lists of x coordinates one ahead and one behind those in pawns
+# Create lists of x coordinates one column ahead and one behind those in pawns
 x_vals_plus += [x[i + 1] for i in x_keys if i < 8]
 x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
 y_vals_plus = [i for i in row if i < 8]
