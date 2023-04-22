@@ -24,7 +24,7 @@ for i in pawns:
 # Create lists of x coordinates one ahead and one behind those in pawns
 x_vals_plus += [x[i + 1] for i in x_keys if i < 8]
 x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
-y_vals = [i for i in row if i < 8 or i > 1]
+y_vals = [i for i in row if i < 8 > 1]
 
 # Concatenate x and y coordinates to be checked in two lists, one for xy + 1 and xy - 1
 for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
