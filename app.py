@@ -22,7 +22,7 @@ for i in pawns:
         x_keys += [key for key, value in x.items() if value == i[0]]
         row += i[1]
 
-# Create lists of diagonal coordinates one row behind pawns in the data set
+# Create lists of x coordinates one ahead and one behind those in pawns
 x_vals_plus += [x[i + 1] for i in x_keys if i < 8]
 x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
 
