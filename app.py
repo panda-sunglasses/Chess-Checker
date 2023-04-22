@@ -41,10 +41,6 @@ for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
 
 # Check if the coordinates in safe_check_plus/minus lists == 1. If so, add 1 to int(safe)
 for i, j in zip(safe_check_plus, safe_check_minus):
-    # My latest attempt to make sure I don't end up with rows 0 or 9.
-    if int(i[1]) or int(j[1]) > 8 < 1:
-        safe += 1
-        pass
-    elif df.at[int(i[1]), i[0]] or df.at[int(j[1]), j[0]] == 1:
+    if df.at[int(i[1]), i[0]] or df.at[int(j[1]), j[0]] == 1:
         safe += 1
 print(safe)
