@@ -13,6 +13,7 @@ safe_check_plus = []
 safe_check_minus = []
 # Create 8x8 matrix of 0's. Positions with a pawn will be switched to 1 based on pawns set.
 df = pd.DataFrame(np.zeros((8, 8)).astype(int), index=y, columns=x.values())
+
 # Split row and column identifiers to mark occupied positions in data frame
 for i in pawns:
     df.at[int(i[1]), i[0]] = 1
@@ -20,9 +21,6 @@ for i in pawns:
     if i[0] in x.values():
         x_keys += [key for key, value in x.items() if value == i[0]]
         row += i[1]
-# print(df)
-# print(x_keys)
-# print(pawns)
 
 # Create lists of diagonal coordinates one row behind pawns in the data set
 x_vals_plus += [x[i + 1] for i in x_keys if i < 8]
@@ -32,12 +30,6 @@ x_vals_minus += [x[i - 1] for i in x_keys if i > 1]
 for i in range(len(row) - abs(len(x_vals_plus) - len(row))):
     safe_check_plus.append(''.join(x_vals_plus[i] + '' + str(int(row[i]) + 1)))
     safe_check_minus.append(''.join(x_vals_minus[i] + '' + str(int(row[i]) - 1)))
-# print(df)
-# print(pawns)
-# print(y_vals_plus)
-# print(y_vals_minus)
-# print(safe_check_plus)
-# print(safe_check_minus)
 
 # Check if the coordinates in safe_check_plus/minus lists == 1. If so, add 1 to int(safe)
 for i, j in zip(safe_check_plus, safe_check_minus):
